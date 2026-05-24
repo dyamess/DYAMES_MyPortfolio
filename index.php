@@ -36,7 +36,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- ENHANCED PRELOADER --- */
         #preloader {
             position: fixed;
             inset: 0;
@@ -53,20 +52,17 @@
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
         }
 
-        /* Custom Cyber Scrollbar */
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: #030303; }
         ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #FFF; }
 
-        /* Plexus Canvas Layer */
         #particle-canvas {
             position: fixed;
             top: 0; left: 0; width: 100vw; height: 100vh;
             z-index: -1; pointer-events: none; opacity: 0.6;
         }
 
-        /* --- BORDERLESS FLOATING CARDS --- */
         .void-card {
             background: #0a0a0a;
             border-radius: 12px;
@@ -90,7 +86,12 @@
             .group:active img { filter: grayscale(0%); transform: scale(1); }
         }
 
-        .img-container { background: #050505; border-radius: 12px 12px 0 0; }
+        .img-container { 
+            background: #050505; 
+            background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+            border-radius: 12px 12px 0 0; 
+        }
         @media (min-width: 768px) {
             .img-container.side-img { border-radius: 12px 0 0 12px; }
         }
@@ -120,7 +121,7 @@
 
     <div id="preloader">
         <div class="w-full max-w-md px-6 flex flex-col items-center">
-            <div id="loading-text" class="font-mono text-xs sm:text-sm text-gray-400 mb-4 tracking-widest uppercase">ESTABLISHING CONNECTION...</div>
+            <div id="loading-text" class="font-mono text-xs sm:text-sm text-zinc-400 mb-4 tracking-widest uppercase">ESTABLISHING CONNECTION...</div>
             <div class="w-full h-1 bg-[#111] rounded-full overflow-hidden mb-3">
                 <div id="loading-bar" class="h-full bg-white w-0 transition-all duration-75 ease-out rounded-full"></div>
             </div>
@@ -132,9 +133,9 @@
 
     <header class="fixed top-0 w-full bg-[#030303]/80 backdrop-blur-xl z-50 transition-transform duration-300 transform translate-y-0" id="navbar">
         <div class="max-w-6xl mx-auto px-6 h-20 sm:h-24 flex justify-between items-center">
-            <span class="font-black text-white text-2xl sm:text-3xl tracking-tighter cursor-pointer" onclick="window.scrollTo(0,0)">JA.</span>
+            <span class="font-black text-white text-2xl sm:text-3xl tracking-tighter cursor-pointer" onclick="window.scrollTo(0,0)">JACC.</span>
             <div class="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm font-bold mono uppercase tracking-wider">
-                <a href="https://github.com/dyamess" target="_blank" class="text-gray-500 hover:text-white transition-colors hidden sm:flex items-center gap-2">
+                <a href="https://github.com/dyamess" target="_blank" class="text-zinc-400 hover:text-white transition-colors hidden sm:flex items-center gap-2">
                     <i data-lucide="github" class="w-4 h-4"></i> GitHub
                 </a>
                 <a href="pdfs/JACC_CV.pdf" target="_blank" class="px-5 py-2.5 sm:px-6 sm:py-3 bg-white text-black rounded-full hover:bg-gray-300 transition-colors flex items-center gap-2 shadow-[0_0_15px_rgba(255,255,255,0.2)]">
@@ -146,7 +147,7 @@
 
     <section class="pt-32 sm:pt-48 pb-16 sm:pb-24 px-6 max-w-6xl mx-auto min-h-[85vh] flex flex-col justify-center relative">
         <div class="max-w-4xl reveal active">
-            <div class="inline-flex items-center gap-3 px-4 py-2 text-gray-300 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] mb-6 sm:mb-8 bg-white/5 rounded-full backdrop-blur-md">
+            <div class="inline-flex items-center gap-3 px-4 py-2 text-zinc-300 text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] mb-6 sm:mb-8 bg-white/5 rounded-full backdrop-blur-md">
                 <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse"></span>
                 System Architect // Developer
             </div>
@@ -155,12 +156,12 @@
                 <span id="typewriter" class="typing-cursor"></span>
             </h1>
             
-            <p class="text-lg sm:text-2xl text-gray-400 mb-8 sm:mb-12 leading-relaxed max-w-2xl font-light">
+            <p class="text-lg sm:text-2xl text-zinc-300 mb-8 sm:mb-12 leading-relaxed max-w-2xl font-light">
                 I build secure web applications that turn manual workflows into highly automated systems. Engineered for absolute data integrity and zero-friction UI.
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="mailto:celestino.jamesadrian.bsit@gmail.com" class="inline-flex items-center justify-center gap-3 px-8 py-4 sm:px-10 sm:py-5 bg-white text-black font-black rounded-full uppercase tracking-widest text-xs sm:text-sm hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 duration-200 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=celestino.jamesadrian.bsit@gmail.com&su=Inquiry%20from%20Portfolio" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-8 py-4 sm:px-10 sm:py-5 bg-white text-black font-black rounded-full uppercase tracking-widest text-xs sm:text-sm hover:bg-gray-200 transition-transform hover:scale-105 active:scale-95 duration-200 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
                     INITIALIZE CONTACT <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
@@ -174,31 +175,31 @@
     <section class="py-16 sm:py-24 px-6 max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 reveal">
             <div class="void-card p-8">
-                <div class="mb-6 font-mono text-xs text-gray-500 uppercase tracking-widest">CORE_LANGUAGES</div>
+                <div class="mb-6 font-mono text-xs text-zinc-400 uppercase tracking-widest">CORE_LANGUAGES</div>
                 <div class="flex flex-wrap gap-2 sm:gap-3">
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">JavaScript</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">PHP</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">Python</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">Node.js</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">Java</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">C++</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">HTML/CSS</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">JavaScript</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">PHP</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">Python</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">Node.js</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">Java</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">C++</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">HTML/CSS</span>
                 </div>
             </div>
             <div class="void-card p-8">
-                <div class="mb-6 font-mono text-xs text-gray-500 uppercase tracking-widest">DATA_&_APIS</div>
+                <div class="mb-6 font-mono text-xs text-zinc-400 uppercase tracking-widest">DATA_&_APIS</div>
                 <div class="flex flex-wrap gap-2 sm:gap-3">
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">MySQL</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">PayMongo API</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">REST Integrations</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">MySQL</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">PayMongo API</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">REST Integrations</span>
                 </div>
             </div>
             <div class="void-card p-8">
-                <div class="mb-6 font-mono text-xs text-gray-500 uppercase tracking-widest">SYS_TOOLS</div>
+                <div class="mb-6 font-mono text-xs text-zinc-400 uppercase tracking-widest">SYS_TOOLS</div>
                 <div class="flex flex-wrap gap-2 sm:gap-3">
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">Google Apps Script</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">Git/GitHub</span>
-                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-gray-300">Workspace Automations</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">Google Apps Script</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">Git/GitHub</span>
+                    <span class="px-3 py-1.5 bg-white/5 rounded-md font-mono text-xs sm:text-sm text-zinc-300">Workspace Automations</span>
                 </div>
             </div>
         </div>
@@ -217,11 +218,11 @@
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-xl sm:text-2xl font-black text-white mb-4 uppercase tracking-tight leading-tight">AM Group Machine Inventory</h3>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="text-[10px] sm:text-xs font-mono font-bold text-gray-400 bg-white/5 rounded px-2 py-1">JS/PHP/MySQL</span>
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-zinc-300 bg-white/5 rounded px-2 py-1">JS/PHP/MySQL</span>
                     </div>
-                    <ul class="space-y-3 text-sm sm:text-base text-gray-400 font-medium mt-auto">
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Developed an inventory web app with secure routing for internal teams.</li>
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Automated PDF proposal generation by auto-fetching live data.</li>
+                    <ul class="space-y-3 text-sm sm:text-base font-medium mt-auto">
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Developed an inventory web app with secure routing for internal teams.</li>
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Automated PDF proposal generation by auto-fetching live data.</li>
                     </ul>
                 </div>
             </div>
@@ -234,12 +235,12 @@
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-xl sm:text-2xl font-black text-white mb-4 uppercase tracking-tight leading-tight">Sole Avenue PH Stockroom Hub</h3>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="text-[10px] sm:text-xs font-mono font-bold text-gray-400 bg-white/5 rounded px-2 py-1">Apps Script</span>
-                        <span class="text-[10px] sm:text-xs font-mono font-bold text-gray-400 bg-white/5 rounded px-2 py-1">JS/HTML</span>
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-zinc-300 bg-white/5 rounded px-2 py-1">Apps Script</span>
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-zinc-300 bg-white/5 rounded px-2 py-1">JS/HTML</span>
                     </div>
-                    <ul class="space-y-3 text-sm sm:text-base text-gray-400 font-medium mt-auto">
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Engineered an automated dashboard for instant SKU-to-rack matching.</li>
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Designed a strictly minimalist UI to reduce staff visual fatigue.</li>
+                    <ul class="space-y-3 text-sm sm:text-base font-medium mt-auto">
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Engineered an automated dashboard for instant SKU-to-rack matching.</li>
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Designed a strictly minimalist UI to reduce staff visual fatigue.</li>
                     </ul>
                 </div>
             </div>
@@ -252,12 +253,12 @@
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-xl sm:text-2xl font-black text-white mb-4 uppercase tracking-tight leading-tight">Aleinah's Resort Management</h3>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="text-[10px] sm:text-xs font-mono font-bold text-gray-400 bg-white/5 rounded px-2 py-1">PHP/MySQL</span>
-                        <span class="text-[10px] sm:text-xs font-mono font-bold text-gray-400 bg-white/5 rounded px-2 py-1">PayMongo API</span>
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-zinc-300 bg-white/5 rounded px-2 py-1">PHP/MySQL</span>
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-zinc-300 bg-white/5 rounded px-2 py-1">PayMongo API</span>
                     </div>
-                    <ul class="space-y-3 text-sm sm:text-base text-gray-400 font-medium mt-auto">
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Built a full-stack booking dashboard replacing legacy spreadsheet workflows.</li>
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Integrated live payments and automated employee payroll.</li>
+                    <ul class="space-y-3 text-sm sm:text-base font-medium mt-auto">
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Built a full-stack booking dashboard replacing legacy spreadsheet workflows.</li>
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Integrated live payments and automated employee payroll.</li>
                     </ul>
                 </div>
             </div>
@@ -270,30 +271,30 @@
                 <div class="p-8 flex flex-col flex-grow">
                     <h3 class="text-xl sm:text-2xl font-black text-white mb-4 uppercase tracking-tight leading-tight">Prime Food Lab Inventory</h3>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="text-[10px] sm:text-xs font-mono font-bold text-gray-400 bg-white/5 rounded px-2 py-1">Apps Script</span>
-                        <span class="text-[10px] sm:text-xs font-mono font-bold text-gray-400 bg-white/5 rounded px-2 py-1">Google Sheets</span>
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-zinc-300 bg-white/5 rounded px-2 py-1">Apps Script</span>
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-zinc-300 bg-white/5 rounded px-2 py-1">Google Sheets</span>
                     </div>
-                    <ul class="space-y-3 text-sm sm:text-base text-gray-400 font-medium mt-auto">
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Developed a specialized tracking system to maintain precise stock levels.</li>
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Streamlined ingredient management entirely within Google Workspace.</li>
+                    <ul class="space-y-3 text-sm sm:text-base font-medium mt-auto">
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Developed a specialized tracking system to maintain precise stock levels.</li>
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Streamlined ingredient management entirely within Google Workspace.</li>
                     </ul>
                 </div>
             </div>
 
             <div class="void-card flex flex-col md:flex-row group reveal md:col-span-2">
                 <div class="md:w-5/12 h-48 md:h-auto relative overflow-hidden img-container side-img">
-                    <img src="assets/am-group-purchase.png" alt="AM Group Purchase Order UI" class="w-full h-full object-cover grayscale" loading="lazy">
-                    <div class="absolute top-4 left-4 bg-white/10 backdrop-blur-md rounded-md text-white text-[10px] font-mono px-3 py-1">SYS_05</div>
+                    <img src="assets/am-group-purchase.png" alt="AM Group Purchase Order UI" class="w-full h-full md:absolute md:inset-0 object-cover grayscale" loading="lazy">
+                    <div class="absolute top-4 left-4 bg-white/10 backdrop-blur-md rounded-md text-white text-[10px] font-mono px-3 py-1 z-10">SYS_05</div>
                 </div>
                 <div class="md:w-7/12 p-8 sm:p-10 flex flex-col justify-center">
                     <h3 class="text-xl sm:text-3xl font-black text-white mb-4 uppercase tracking-tight leading-tight">AM Group Purchase Order System</h3>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="text-[10px] sm:text-xs font-mono font-bold text-gray-400 bg-white/5 rounded px-2 py-1">Apps Script</span>
-                        <span class="text-[10px] sm:text-xs font-mono font-bold text-gray-400 bg-white/5 rounded px-2 py-1">HTML/CSS</span>
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-zinc-300 bg-white/5 rounded px-2 py-1">Apps Script</span>
+                        <span class="text-[10px] sm:text-xs font-mono font-bold text-zinc-300 bg-white/5 rounded px-2 py-1">HTML/CSS</span>
                     </div>
-                    <ul class="space-y-3 text-sm sm:text-base text-gray-400 font-medium">
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Built an automated workflow engine to replace manual purchase order paperwork.</li>
-                        <li class="flex items-start gap-3"><span class="font-mono text-white mt-0.5">>></span> Auto-generated formatted, error-free PO documents to streamline procurement.</li>
+                    <ul class="space-y-3 text-sm sm:text-base font-medium">
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Built an automated workflow engine to replace manual purchase order paperwork.</li>
+                        <li class="flex items-start gap-3 text-zinc-300"><span class="font-mono text-white mt-0.5 shrink-0">>></span> Auto-generated formatted, error-free PO documents to streamline procurement.</li>
                     </ul>
                 </div>
             </div>
@@ -310,36 +311,36 @@
                     <div class="reveal flex gap-6">
                         <div class="w-2 h-2 rounded-full bg-white shadow-[0_0_10px_#FFF] mt-2 shrink-0"></div>
                         <div>
-                            <span class="text-[10px] sm:text-xs font-mono text-gray-500 block mb-2">MAR 2026 - MAY 2026</span>
+                            <span class="text-[10px] sm:text-xs font-mono text-zinc-400 block mb-2">MAR 2026 - MAY 2026</span>
                             <h3 class="text-base sm:text-lg font-bold text-white uppercase tracking-tight">Systems Developer Intern</h3>
-                            <p class="text-gray-400 text-sm mt-1">AM Group / Prime Food Lab</p>
+                            <p class="text-zinc-300 text-sm mt-1">AM Group / Prime Food Lab</p>
                         </div>
                     </div>
                     
                     <div class="reveal flex gap-6">
                         <div class="w-2 h-2 rounded-full bg-gray-500 mt-2 shrink-0"></div>
                         <div>
-                            <span class="text-[10px] sm:text-xs font-mono text-gray-500 block mb-2">JAN 2026 - MAR 2026</span>
+                            <span class="text-[10px] sm:text-xs font-mono text-zinc-400 block mb-2">JAN 2026 - MAR 2026</span>
                             <h3 class="text-base sm:text-lg font-bold text-white uppercase tracking-tight">IT & Systems Developer Intern</h3>
-                            <p class="text-gray-400 text-sm mt-1">ZWART Trading OPC (Sole Avenue PH)</p>
+                            <p class="text-zinc-300 text-sm mt-1">ZWART Trading OPC (Sole Avenue PH)</p>
                         </div>
                     </div>
 
                     <div class="reveal flex gap-6">
                         <div class="w-2 h-2 rounded-full bg-gray-700 mt-2 shrink-0"></div>
                         <div>
-                            <span class="text-[10px] sm:text-xs font-mono text-gray-500 block mb-2">SUMMER</span>
+                            <span class="text-[10px] sm:text-xs font-mono text-zinc-400 block mb-2">SUMMER</span>
                             <h3 class="text-base sm:text-lg font-bold text-white uppercase tracking-tight">Administrative Intern</h3>
-                            <p class="text-gray-400 text-sm mt-1">Elsa Liwanag Tinsay Accounting and CPA's</p>
+                            <p class="text-zinc-300 text-sm mt-1">Elsa Liwanag Tinsay Accounting and CPA's</p>
                         </div>
                     </div>
 
                     <div class="reveal flex gap-6 pt-6">
                         <div class="w-2 h-2 rounded-full bg-[#111] mt-2 shrink-0"></div>
                         <div>
-                            <span class="text-[10px] sm:text-xs font-mono text-gray-500 block mb-2">GRADUATION: 2026</span>
+                            <span class="text-[10px] sm:text-xs font-mono text-zinc-400 block mb-2">GRADUATION: 2026</span>
                             <h3 class="text-base sm:text-lg font-bold text-white uppercase tracking-tight">BS Information Technology</h3>
-                            <p class="text-gray-400 text-sm mt-1">Bulacan State University Main Campus</p>
+                            <p class="text-zinc-300 text-sm mt-1">Bulacan State University Main Campus</p>
                         </div>
                     </div>
                 </div>
@@ -351,27 +352,27 @@
                     <div class="void-card p-6 reveal">
                         <i data-lucide="shield-check" class="w-6 h-6 text-white mb-4"></i>
                         <h4 class="font-bold text-sm text-white mb-2">Intro to Cybersecurity</h4>
-                        <p class="text-[10px] font-mono text-gray-500">CISCO • 2025</p>
+                        <p class="text-[10px] font-mono text-zinc-400">CISCO • 2025</p>
                     </div>
                     <div class="void-card p-6 reveal">
                         <i data-lucide="shield-alert" class="w-6 h-6 text-white mb-4"></i>
                         <h4 class="font-bold text-sm text-white mb-2">Cyber Threat Management</h4>
-                        <p class="text-[10px] font-mono text-gray-500">CISCO • 2025</p>
+                        <p class="text-[10px] font-mono text-zinc-400">CISCO • 2025</p>
                     </div>
                     <div class="void-card p-6 reveal">
                         <i data-lucide="server" class="w-6 h-6 text-white mb-4"></i>
                         <h4 class="font-bold text-sm text-white mb-2">IT Service Management</h4>
-                        <p class="text-[10px] font-mono text-gray-500">ISO/IEC 20000 • 2024</p>
+                        <p class="text-[10px] font-mono text-zinc-400">ISO/IEC 20000 • 2024</p>
                     </div>
                     <div class="void-card p-6 reveal">
                         <i data-lucide="briefcase" class="w-6 h-6 text-white mb-4"></i>
                         <h4 class="font-bold text-sm text-white mb-2">Business Foundations</h4>
-                        <p class="text-[10px] font-mono text-gray-500">ENTREPRENEURSHIP • 2024</p>
+                        <p class="text-[10px] font-mono text-zinc-400">ENTREPRENEURSHIP • 2024</p>
                     </div>
                     <div class="void-card p-6 reveal sm:col-span-2">
                         <i data-lucide="file-badge" class="w-6 h-6 text-white mb-4"></i>
                         <h4 class="font-bold text-sm text-white mb-2">Intellectual Property Course</h4>
-                        <p class="text-[10px] font-mono text-gray-500">ILEAP • 2024</p>
+                        <p class="text-[10px] font-mono text-zinc-400">ILEAP • 2024</p>
                     </div>
                 </div>
             </div>
@@ -381,16 +382,16 @@
 
     <footer class="py-12 sm:py-16 bg-[#030303] text-center px-6 mt-10">
         <div class="w-16 h-1 bg-[#111] rounded-full mx-auto mb-8"></div>
-        <p class="text-[10px] sm:text-xs font-mono text-gray-600 uppercase tracking-[0.2em] sm:tracking-[0.3em]">
+        <p class="text-[10px] sm:text-xs font-mono text-zinc-500 uppercase tracking-[0.2em] sm:tracking-[0.3em]">
             James Adrian C. Celestino // SYSTEM_ARCHITECT // 2026
         </p>
     </footer>
 
     <script>
-        lucide.createIcons();
-
-        // --- ENHANCED PRELOADER LOGIC ---
         window.addEventListener('load', () => {
+            // Initialize Lucide icons on load to prevent rendering race conditions
+            lucide.createIcons();
+            
             const preloader = document.getElementById('preloader');
             const loadingText = document.getElementById('loading-text');
             const loadingBar = document.getElementById('loading-bar');
@@ -433,7 +434,6 @@
             }, 35); 
         });
 
-        // --- TYPEWRITER EFFECT ---
         const text = "Hi, I'm James Adrian.";
         const typewriterElement = document.getElementById('typewriter');
         let i = 0;
@@ -445,7 +445,8 @@
             }
         }
 
-        // --- SCROLL REVEAL ENGINE ---
+        // Highly robust scroll reveal observer that ensures smooth triggers on all screen sizes,
+        // including bottom-of-the-page elements and grid layouts on high-res monitors.
         const revealElements = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -454,10 +455,9 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: "0px 0px -20px 0px" });
+        }, { threshold: 0.02, rootMargin: "0px 0px 80px 0px" });
         revealElements.forEach(el => revealObserver.observe(el));
 
-        // --- DYNAMIC NAVBAR ---
         let lastScrollY = window.scrollY;
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
@@ -469,7 +469,6 @@
             lastScrollY = window.scrollY;
         });
 
-        // --- PLEXUS ZOOM CANVAS (Dots Removed, Mouse Magnet Added) ---
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
         
@@ -480,7 +479,6 @@
         resizeCanvas();
 
         let particlesArray = [];
-        // Track mouse position
         let mouse = { x: null, y: null };
         window.addEventListener('mousemove', (event) => {
             mouse.x = event.x;
@@ -498,7 +496,6 @@
                 this.directionX = (Math.random() * 1) - 0.5;
                 this.directionY = (Math.random() * 1) - 0.5;
             }
-            // NO DOTS DRAWN. Only invisible nodes exist.
             update() {
                 if (this.x > canvas.width || this.x < 0) { this.directionX = -this.directionX; }
                 if (this.y > canvas.height || this.y < 0) { this.directionY = -this.directionY; }
@@ -532,16 +529,14 @@
             let maxDistance = window.innerWidth < 768 ? (canvas.width / 6) * (canvas.height / 6) : (canvas.width / 9) * (canvas.height / 9);
             
             for (let a = 0; a < particlesArray.length; a++) {
-                // Connect particles to each other
                 for (let b = a; b < particlesArray.length; b++) {
                     let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
                                  + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
                     
                     if (distance < maxDistance) {
                         let opacity = 1 - (distance / maxDistance);
-                        // Subtle background lines
-                        ctx.strokeStyle = 'rgba(255,255,255,' + (opacity * 0.15) + ')';
-                        ctx.lineWidth = 1;
+                        ctx.strokeStyle = 'rgba(255,255,255,' + (opacity * 0.25) + ')';
+                        ctx.lineWidth = 2; 
                         ctx.beginPath();
                         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                         ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
@@ -549,17 +544,14 @@
                     }
                 }
                 
-                // ZOOM EFFECT: Connect particles to the MOUSE
                 if (mouse.x != null && mouse.y != null) {
                     let mouseDist = ((particlesArray[a].x - mouse.x) * (particlesArray[a].x - mouse.x))
                                   + ((particlesArray[a].y - mouse.y) * (particlesArray[a].y - mouse.y));
                     
-                    // Increased radius for mouse connection to simulate light/zoom
                     if (mouseDist < maxDistance * 1.5) {
                         let mouseOpacity = 1 - (mouseDist / (maxDistance * 1.5));
-                        // Brighter lines pulling toward cursor
-                        ctx.strokeStyle = 'rgba(255,255,255,' + (mouseOpacity * 0.35) + ')';
-                        ctx.lineWidth = 1.5;
+                        ctx.strokeStyle = 'rgba(255,255,255,' + (mouseOpacity * 0.5) + ')';
+                        ctx.lineWidth = 3; 
                         ctx.beginPath();
                         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
                         ctx.lineTo(mouse.x, mouse.y);
